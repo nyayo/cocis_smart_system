@@ -1,0 +1,13 @@
+[wokwi]
+version = 1
+firmware = '.pio/build/standalone/firmware.bin'
+elf = '.pio/build/standalone/firmware.elf'
+
+# SD card contents persist between simulation runs: the folder "sdcard" next
+# to this file is loaded onto the card at start, and everything the firmware
+# writes (access log, tag list) is written back to it when the simulation
+# stops or restarts. Create the folder once:  mkdir sdcard
+[[sdcard]]
+folder = 'sdcard'
+size = '32M'
+writeback = true
